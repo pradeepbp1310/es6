@@ -16,35 +16,35 @@ Declare a variable with var that means variable can be accessed anywhere within 
 	f(false); // undefined
 ``` 
 
-What is going here? Why you got undeined in the above code. This is how it breaks down
+What is going here? Why you got undefined in the above code. This is how it breaks down
 ```javascript
-	var x = 3;
-	function f(random){
-	var x;
-	if(random){
-		x = Math.random();
-		return x;
-	}
+var x = 3;
+function f(random){
+var x;
+if(random){
+	x = Math.random();
 	return x;
-	}
-	f(false); // undefined
+}
+return x;
+}
+f(false); // undefined
 ```
 
 ### using let
-- let/const is block scoped, variable with let/const can only be within the defined block.
+- let/const is block scoped, variable with let/const can only be accessed within the defined block for ex. if(){let x;}.
 - Use let whenever the variable values changes in future for ex. in iterations use let.
 - Use const when variable values never changes again in future.
 
 ```javascript
-	let y = 3;
-	function f(random){
-	if(random){
-		let y = Math.random();
-		return y;
-	}
+let y = 3;
+function f(random){
+if(random){
+	let y = Math.random();
 	return y;
-	}
-	f(false) // 3
+}
+return y;
+}
+f(false) // 3
 ``` 
 
 ## Summary
