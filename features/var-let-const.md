@@ -1,5 +1,4 @@
 # Core ES6 features
-
 ## From var to const/let
 Declaring a variable with var that means variable can be accessed anywhere within the function. In turn variable with var keyword is function scope.
 
