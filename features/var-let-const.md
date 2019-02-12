@@ -1,19 +1,19 @@
 # Core ES6 features
 
 ## From var to const/let
-Declare a variable with var that means variable can be accessed anywhere within the function. In turn variable the var keyword is function scope.
+Declaring a variable with var that means variable can be accessed anywhere within the function. In turn variable with var keyword is function scope.
 
-### using var
+### var
 ```javascript
-	var x = 3;
-	function f(random){
-	if(random){
-		var x = Math.random(); 
-		return x;
-	}
+var x = 3;
+function f(random){
+if(random){
+	var x = Math.random(); 
 	return x;
-	}
-	f(false); // undefined
+}
+return x;
+}
+f(false); // undefined
 ``` 
 
 What is going here? Why you got undefined in the above code. This is how it breaks down
@@ -30,8 +30,8 @@ return x;
 f(false); // undefined
 ```
 
-### using let
-- let/const is block scoped, variable with let/const can only be accessed within the defined block for ex. if(){let x;}.
+### let
+- let/const is block scoped, variable with let/const can only be accessed within the defined block for ex. if(){let x}.
 - Use let whenever the variable values changes in future for ex. in iterations use let.
 - Use const when variable values never changes again in future.
 
