@@ -1,2 +1,2 @@
 # Table of contents
-* ["core ES6 features"](features)
+* ["Core ES6 features"](features/ES6-list-of-features.md)

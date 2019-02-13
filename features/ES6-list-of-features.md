@@ -1,5 +1,8 @@
 # Core ES6 features
 
+## 0. From var to let/const
+* ["From var to let/cons"](var-let-const.md)
+
 ## 1. From IIFEs to blocks
 Restrict scope of a variable to blocks
 
@@ -72,3 +75,47 @@ const [, year, month, day] =
     .exec('2999-12-31');
 ```
 - The empty slot at the beginning of the Array pattern skips the Array element at index zero.
+
+## 5. From for loop to forEach to for-of
+### for loop
+```javascript
+// pros: break and continue
+// cons: initialisation var i = 0; Condtion i<arr.length; end point i++
+var arr = ['a','b','c','d'];
+for(var i =0; i<arr.length; i++){
+	console.log(arr[i]);
+}
+```
+### forEach
+```javascript
+// pros: concise, less code, pass function as parameter
+arr.forEach(el=>console.log(el));
+```
+
+Pass function as parameter to forEach
+```javascript
+const num = [1,2,3,4,5,6];
+let sum = 0;
+function addNumber(number){
+	sum+=number;
+}
+num.forEach(addNumber); // Passing addNumber function as parameter to forEach
+console.log(sum); //21
+```
+
+### for-of
+// for-of combines both advantages
+```javascript
+var arr = ['a','b','c','d'];
+for(const ele of arr){
+	console.log(ele);
+}
+```
+
+Get both index and values using array.entries() and destructuring
+```javascript
+// to get both index and values using array.entries() and destructuring
+	for(const[index, ele] of arr.entries()){
+		console.log(index, ele);
+	}
+```
