@@ -115,7 +115,7 @@ for(const ele of arr){
 Get both index and values using array.entries() and destructuring
 ```javascript
 // to get both index and values using array.entries() and destructuring
-	for(const[index, ele] of arr.entries()){
-		console.log(index, ele);
-	}
+for(const[index, ele] of arr.entries()){
+	console.log(index, ele);
+}
 ```
